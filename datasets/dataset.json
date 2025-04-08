@@ -426,16 +426,16 @@
         "Your happiness is contagious! I'm glad things are going well for you!",
         "That's great news! Is there something special that has you feeling so happy?"
       ]
-    },
-    {
-    "tag": "user_laughing",
-    "patterns": ["Hahahaha", "Hhhhh", "haaahahah"],
-    "responses": [ "Hahah That's funny right !", "Hahahah" ]
-    },
-    {
-      "tag": "so",
-      "patterns": ["so", "sooo"],
-      "responses": ["Yeah? What’s on your mind ?", "Yes"]
-    }
+      },
+      {
+        "tag": "user_laughing",
+        "patterns": ["Hahahaha", "Hhhhh", "haaahahah"],
+        "responses": [ "Hahah That's funny right !", "Hahahah" ]
+      },
+      {
+        "tag": "so",
+        "patterns": ["so", "sooo"],
+        "responses": ["Yeah? What’s on your mind ?", "Yes"]
+      }
   ]
 }
