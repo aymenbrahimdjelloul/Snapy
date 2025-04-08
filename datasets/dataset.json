@@ -435,7 +435,7 @@
     {
       "tag": "so",
       "patterns": ["so", "sooo"],
-      "responses": ["Yeah? What’s on your mind ?", "Yes"]
+      "responses": ["Yeah? What’s on your mind ?", "Yes"],
 
     },
 
