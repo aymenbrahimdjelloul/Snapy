@@ -430,9 +430,7 @@
     {
     "tag": "user_laughing",
     "patterns": ["Hahahaha", "Hhhhh", "haaahahah"],
-    "responses": [
-        "Hahah That's funny right !"
-      ]
+    "responses": [ "Hahah That's funny right !", "Hahahah" ]
     }
   ]
 }
