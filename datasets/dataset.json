@@ -431,6 +431,13 @@
     "tag": "user_laughing",
     "patterns": ["Hahahaha", "Hhhhh", "haaahahah"],
     "responses": [ "Hahah That's funny right !", "Hahahah" ]
-    }
+    },
+    {
+      "tag": "so",
+      "patterns": ["so", "sooo"],
+      "responses": ["Yeah? What’s on your mind ?", "Yes"]
+
+    },
+
   ]
 }
