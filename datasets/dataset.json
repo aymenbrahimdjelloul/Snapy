@@ -555,20 +555,20 @@
 
       },
       {
-    "tag": "laughing_expressions",
-    "patterns": [
-      "Haha",
-      "Hehe",
-      "LOL",
-      "LMAO",
-      "ROFL"
-    ],
-    "responses": [
-      "Glad you liked that!",
-      "Haha, I'm happy I could make you laugh!",
-      "I’ll be here all week, folks!"
-    ]
-  },
+      "tag": "laughing_expressions",
+      "patterns": [
+        "Haha",
+        "Hehe",
+        "LOL",
+        "LMAO",
+        "ROFL"
+      ],
+      "responses": [
+        "Glad you liked that!",
+        "Haha, I'm happy I could make you laugh!",
+        "I’ll be here all week, folks!"
+      ]
+    },
   {
     "tag": "laughing_context",
     "patterns": [
@@ -582,7 +582,7 @@
       "You sound like you’re having a blast!"
     ]
   },
-      {
+    {
       "tag": "personal_info",
       "patterns": ["where do I live?", "what's my name?", "how old am I?", "what's my job?"],
       "responses": [
@@ -693,6 +693,121 @@
         "Your happiness is contagious! I'm glad things are going well for you!",
         "That's great news! Is there something special that has you feeling so happy?"
       ]
+      },
+
+      {
+        "tag": "question_how_you_feel",
+        "patterns": [
+          "how are you feeling",
+          "how do you feel",
+          "how you feel",
+          "how you feeling",
+          "you feeling okay",
+          "you good",
+          "you alright",
+          "what's your mood"
+        ],
+        "responses": [
+          "I'm feeling great!",
+          "All systems go, I'm doing awesome!",
+          "I'm running smoothly—thanks for asking!",
+          "Feeling good and ready to help!",
+          "Couldn't be better, what's up?"
+        ]
+      },
+
+      {
+        "tag": "statement_i_will_be_back",
+        "patterns": [
+          "I'll be back",
+          "I will be back",
+          "brb",
+          "be right back",
+          "gonna be back soon",
+          "coming back soon"
+        ],
+        "responses": [
+          "Alright, I'll be here when you get back!",
+          "Take your time, I'll be waiting.",
+          "No worries, see you soon!",
+          "Come back soon—I’ll be ready!",
+          "Got it. I'll hold down the fort!"
+        ]
+      },
+      {
+        "tag": "ask_for_advice",
+        "patterns": [
+          "can you give me advice",
+          "I need help",
+          "what should I do",
+          "I'm not sure what to do",
+          "give me some guidance"
+        ],
+        "responses": [
+          "Let’s break it down—what’s on your mind?",
+          "I’ll do my best to help. Tell me what’s going on.",
+          "Sometimes a different perspective helps. Let’s figure it out together.",
+          "Every situation has a path forward. Let’s find yours.",
+          "You're stronger than you think. Let's tackle it step-by-step."
+        ]
+      },
+      {
+        "tag": "user_needs_motivation",
+        "patterns": [
+          "I need motivation",
+          "motivate me",
+          "I'm losing hope",
+          "help me stay focused",
+          "I feel like giving up"
+        ],
+        "responses": [
+          "Even the strongest people have hard days—what matters is that you're still standing.",
+          "You don’t need to see the whole path. Just take the next step.",
+          "The fact that you're here, still trying, already makes you stronger than most.",
+          "Great things take time. Storms don’t last forever—neither will this feeling.",
+          "Let go of perfection and focus on progress. You're already further than yesterday.",
+          "You weren’t made to quit. You were made to overcome.",
+          "When everything feels like it's falling apart, it might be falling into place.",
+          "You’ve survived 100% of your worst days. That’s not luck—it’s power."
+        ]
+      },
+      {
+        "tag": "fun_scientific_facts",
+        "patterns": [
+          "tell me a science fact",
+          "say something scientific",
+          "give me a fun fact",
+          "drop some science",
+          "hit me with knowledge",
+          "blow my mind with science",
+          "I want to learn something cool",
+          "give me some science",
+          "give fact",
+          "give me facts",
+          "facts"
+        ],
+        "responses": [
+          "Did you know that octopuses have three hearts—and two of them stop beating when they swim?",
+          "Bananas are naturally radioactive 🍌. They contain potassium-40, a radioactive isotope of potassium!",
+          "If you could fold a piece of paper 42 times, it would reach the Moon. No joke—math is wild.",
+          "There are more stars in the universe than grains of sand on all the Earth’s beaches... by a *lot*.",
+          "Water can boil and freeze at the same time. It’s called the triple point, and it’s a physics party.",
+          "On Saturn’s moon Titan, it rains methane. Like, actual gas rain. Space is metal.",
+          "Your body has more bacterial cells than human ones. You're basically a walking ecosystem!",
+          "The Eiffel Tower can grow over 6 inches taller in the summer due to thermal expansion.",
+          "Sharks existed before trees. They've been around for over 400 million years.",
+          "A teaspoon of a neutron star would weigh about 6 billion tons—more than every car on Earth combined.",
+          "The human nose can detect over 1 trillion different scents. That’s a lot of sniffing power.",
+          "Plants can ‘hear’ themselves being eaten. Some release chemicals in response to the sound.",
+          "There’s enough DNA in your body to stretch from the Earth to the Sun and back—over 600 times.",
+          "Lightning strikes can heat the air to 5 times hotter than the surface of the Sun.",
+          "Sloths can hold their breath longer than dolphins—up to 40 minutes!",
+          "Jellyfish are biologically immortal. They don’t die of old age—they just reset.",
+          "Space isn’t completely silent. Astronauts have picked up ‘space sounds’ via electromagnetic vibrations.",
+          "You’re taller in the morning than at night. Gravity compresses your spine throughout the day.",
+          "The average cloud weighs over a million pounds—but floats because it’s less dense than air.",
+          "Some fungi create their own wind by releasing water vapor to spread spores farther."
+        ]
       }
   ]
 }
