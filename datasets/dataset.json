@@ -1,6 +1,7 @@
 {
-  "name": "comprehensive_conversation_dataset",
-  "version": "1.0",
+  "name": "basic_dataset",
+  "version": "0.1",
+  "updated": "09.04.2025"
   "intents": [
     {
       "tag": "unknown",
