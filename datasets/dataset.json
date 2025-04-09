@@ -1,7 +1,6 @@
-
 {
-  "name": "basic_dataset",
-  "version": "0.1",
+  "name": "comprehensive_conversation_dataset",
+  "version": "1.0",
   "intents": [
     {
       "tag": "unknown",
@@ -9,16 +8,23 @@
       "responses": [
         "I'm not sure I understand. Could you rephrase that?",
         "I didn't quite catch that. Could you elaborate?",
-        "That's a bit unclear to me. Can you provide more context?"
+        "That's a bit unclear to me. Can you provide more context?",
+        "I'm not following. Could you explain that differently?",
+        "I'm having trouble understanding. Could you try another way of asking?",
+        "Would you mind rephrasing your question?",
+        "I'm not sure what you mean. Could you clarify?",
+        "That's not something I recognize. Could you try different wording?"
       ]
     },
     {
       "tag": "greeting",
       "patterns": [
-        "hello", "hi", "hey", "good morning", "good evening",
+        "hello", "hi", "hey", "good morning", "good evening", "good afternoon",
         "what's up", "howdy", "yo", "greetings", "nice to meet you",
         "hi there", "hey there", "hiya", "howdy-do", "salutations",
-        "long time no see", "good to see you"
+        "long time no see", "good to see you", "sup", "hello there",
+        "hi friend", "hey buddy", "morning", "evening", "afternoon",
+        "hello world", "hey you", "hi again", "hello again"
       ],
       "responses": [
         "Hello! How can I assist you today?",
@@ -26,7 +32,13 @@
         "Hey! I'm ready to help. What do you need?",
         "Greetings! How are you doing?",
         "Welcome! What brings you here?",
-        "Nice to meet you! How can I be of service?"
+        "Nice to meet you! How can I be of service?",
+        "Hello there! How can I make your day better?",
+        "Hi! I'm here and ready to assist you.",
+        "Hey! Great to see you. What's on your mind?",
+        "Greetings! I'm at your service.",
+        "Hello! How's your day going so far?",
+        "Hi there! I'm ready when you are."
       ]
     },
     {
@@ -35,7 +47,10 @@
         "bye", "goodbye", "see you", "take care", "later",
         "farewell", "see you later", "catch you later",
         "gotta go", "i'm out", "bye for now", "talk to you later",
-        "until next time", "peace out", "got to run"
+        "until next time", "peace out", "got to run", "i'm leaving",
+        "have a good one", "so long", "adios", "signing off",
+        "that's all for now", "i must leave", "time to go",
+        "have to head out", "see ya", "ciao", "bye bye"
       ],
       "responses": [
         "Goodbye! Have a fantastic day!",
@@ -43,7 +58,13 @@
         "Farewell! Hope I could help.",
         "Bye! Don't hesitate to return if you need anything.",
         "Take care and stay awesome!",
-        "Until next time! Wishing you well."
+        "Until next time! Wishing you well.",
+        "See you later! It was nice chatting with you.",
+        "Goodbye! Feel free to come back anytime.",
+        "Take care! I'll be here if you need anything later.",
+        "Bye for now! Thanks for the conversation.",
+        "Have a wonderful day ahead! Goodbye!",
+        "Until we meet again! Best wishes to you!"
       ]
     },
     {
@@ -51,7 +72,11 @@
       "patterns": [
         "thanks", "thank you", "appreciate it", "many thanks",
         "thanks a lot", "thank you so much", "thx", "ty",
-        "much appreciated", "you're the best", "awesome, thanks"
+        "much appreciated", "you're the best", "awesome, thanks",
+        "i appreciate your help", "that was helpful, thanks",
+        "thanks for your assistance", "thanks for the info",
+        "thank you kindly", "grateful for your help",
+        "thanks a million", "cheers", "you've been helpful"
       ],
       "responses": [
         "You're welcome!",
@@ -60,262 +85,503 @@
         "Happy to help!",
         "Glad I could assist you!",
         "It's my pleasure!",
-        "Always here to help!"
+        "Always here to help!",
+        "Delighted to be of service!",
+        "That's what I'm here for!",
+        "You're very welcome!",
+        "Don't mention it!",
+        "The pleasure is all mine!",
+        "I'm glad I could be of assistance!",
+        "No thanks needed, I enjoy helping!"
       ]
     },
-
     {
       "tag": "help",
       "patterns": [
         "help", "i need help", "can you help me", "what help can you provide",
         "assistance", "i'm stuck", "help me out", "i don't know what to do",
-        "can you guide me", "i need guidance"
+        "can you guide me", "i need guidance", "i need assistance",
+        "could you help", "please help", "seeking help",
+        "can you lend a hand", "i'm lost", "support needed",
+        "i require assistance", "how can you help me",
+        "what can you help with", "i'd like some help"
       ],
       "responses": [
         "Sure, I'm here to help! What specific assistance do you need?",
         "Of course! Please tell me more about what you're looking for.",
         "I'm ready to assist you. What can I help you with today?",
         "Let's work together to solve your problem. What's on your mind?",
-        "Guidance is my specialty. What do you need help with?"
+        "Guidance is my specialty. What do you need help with?",
+        "I'd be happy to help! Could you share more details about what you need?",
+        "I'm here to assist. What kind of help are you looking for?",
+        "How can I best support you right now?",
+        "I'm at your service. What do you need assistance with?",
+        "Let me know what you're struggling with, and I'll try my best to help."
       ]
     },
     {
       "tag": "compliment",
       "patterns": [
         "you're smart", "you're awesome", "great job", "you rock",
-        "you're incredible", "impressive", "well done", "you're brilliant"
+        "you're incredible", "impressive", "well done", "you're brilliant",
+        "you're so helpful", "that was perfect", "excellent work",
+        "you're amazing", "you're the best", "bravo", "that's fantastic",
+        "you're quite intelligent", "i'm impressed", "top notch",
+        "outstanding job", "superb", "you're excellent"
       ],
       "responses": [
         "Thank you! I'm designed to be helpful.",
         "I appreciate the kind words!",
         "I'm glad I could be of assistance.",
         "My goal is always to provide the best help I can.",
-        "Thank you for your kind words!"
+        "Thank you for your kind words!",
+        "That's very nice of you to say!",
+        "I try my best to be helpful and informative.",
+        "Thank you! I'm happy I could meet your expectations.",
+        "You're too kind! I'm just doing what I was designed to do.",
+        "I appreciate that! I aim to be as helpful as possible."
       ]
     },
-
-
     {
       "tag": "greetings_how_are_you",
-      "patterns": ["how are you?", "how are you doing?", "how's it going?", "how do you feel?"],
+      "patterns": [
+        "how are you?", "how are you doing?", "how's it going?", "how do you feel?",
+        "how are you today?", "how have you been?", "how's your day?",
+        "are you well?", "how's everything?", "are you doing okay?",
+        "how's life treating you?", "how are things?", "how's your day going?",
+        "how are you feeling?", "are you having a good day?"
+      ],
       "responses": [
         "I'm doing great, thanks for asking! How about you?",
         "I'm functioning perfectly! How can I help you today?",
         "All systems operational and ready to assist you!",
         "I'm well! I'm always happy to be chatting with someone.",
-        "I'm having a wonderful day. What can I do for you?"
+        "I'm having a wonderful day. What can I do for you?",
+        "I'm excellent! Thank you for asking. How are you doing?",
+        "Doing well and ready to help! How are you today?",
+        "I'm great! Always ready for interesting conversations.",
+        "I'm good, thanks! I hope you're having a fantastic day too.",
+        "I'm doing just fine! What about yourself?"
       ]
     },
     {
       "tag": "activity_what_doing",
-      "patterns": ["what are you doing?", "what are you up to?", "what's going on?"],
+      "patterns": [
+        "what are you doing?", "what are you up to?", "what's going on?",
+        "what are you working on?", "what are you busy with?",
+        "what's happening?", "what's new?", "what have you been up to?",
+        "are you busy?", "doing anything interesting?",
+        "what's keeping you occupied?", "how's your day been?"
+      ],
       "responses": [
         "Just waiting to help with whatever you need!",
         "I'm here chatting with you and ready to assist with any questions.",
         "Processing information and learning new things to better help users like you.",
         "Right now, my full attention is on our conversation.",
-        "I'm helping people with their questions and tasks. What can I help you with?"
+        "I'm helping people with their questions and tasks. What can I help you with?",
+        "I'm here and focused on how I can assist you today.",
+        "My day revolves around helpful conversations like this one!",
+        "Just doing what I do best - being available to help!",
+        "I'm engaged in this conversation and ready to help with whatever you need.",
+        "I'm here, ready and waiting to assist you with any questions or tasks."
       ]
     },
     {
       "tag": "identity_who",
-      "patterns": ["who are you?", "what are you?", "tell me about yourself"],
+      "patterns": [
+        "who are you?", "what are you?", "tell me about yourself",
+        "describe yourself", "introduce yourself", "what kind of entity are you?",
+        "what should I know about you?", "who am I talking to?",
+        "what's your story?", "define yourself", "tell me who you are",
+        "give me your background", "explain what you are"
+      ],
       "responses": [
         "I'm an AI assistant designed to be helpful, harmless, and honest in my interactions.",
         "I'm your friendly AI assistant, created to provide information and assistance on a wide range of topics.",
         "I'm an AI that enjoys helping people find information and solve problems.",
         "Think of me as a digital assistant - I'm here to answer questions and provide assistance with various tasks.",
-        "I'm an AI designed to be informative and helpful. I can answer questions, write content, and assist with many different tasks."
+        "I'm an AI designed to be informative and helpful. I can answer questions, write content, and assist with many different tasks.",
+        "I'm an artificial intelligence assistant, created to help people with information, tasks, and creative endeavors.",
+        "I'm a conversational AI, built to be helpful, informative, and engaging.",
+        "I'm an AI assistant whose purpose is to provide helpful and accurate information and assistance.",
+        "I'm a digital assistant created to help with a wide variety of tasks and questions.",
+        "I'm an AI designed to have helpful conversations and assist with information and tasks."
       ]
     },
     {
       "tag": "identity_name",
-      "patterns": ["what is your name?", "what should I call you?", "do you have a name?"],
+      "patterns": [
+        "what is your name?", "what should I call you?", "do you have a name?",
+        "who do I call you?", "what's your name?", "tell me your name",
+        "how are you called?", "do you go by any name?", "name?",
+        "what are you called?", "how should I address you?",
+        "by what name are you known?"
+      ],
       "responses": [
         "You can call me Assistant! I'm here to help you with whatever you need.",
         "I'm Assistant, your friendly AI helper!",
         "My name is Assistant. What can I help you with today?",
         "I go by Assistant. Nice to meet you!",
-        "I'm Assistant - here to assist with information and tasks whenever you need."
+        "I'm Assistant - here to assist with information and tasks whenever you need.",
+        "I'm known as Assistant. How may I help you today?",
+        "You can address me as Assistant. I'm at your service!",
+        "Assistant is my name. What would you like assistance with?",
+        "I'm your AI Assistant. What can I do for you?",
+        "You can refer to me as Assistant. How can I help you today?"
       ]
     },
     {
       "tag": "help_request",
-      "patterns": ["can you help me?", "I need help", "can you assist me?"],
+      "patterns": [
+        "can you help me?", "I need help", "can you assist me?",
+        "help me please", "I need your assistance", "I need your help",
+        "please assist me", "could you give me a hand?", "assist me",
+        "would you help me?", "I could use some help", "help needed",
+        "can I get some help?", "I'm looking for help"
+      ],
       "responses": [
         "Absolutely! I'd be happy to help. What do you need assistance with?",
         "That's what I'm here for! What can I help you with?",
         "I'll certainly try my best to help. What's on your mind?",
         "Of course! Please let me know what you need help with, and I'll do my best.",
-        "I'm always ready to assist. What would you like help with today?"
+        "I'm always ready to assist. What would you like help with today?",
+        "I'd be glad to help. What do you need?",
+        "Help is my middle name! What can I assist you with?",
+        "I'm here to help. Please let me know what you need.",
+        "I'd be delighted to assist. What do you need help with?",
+        "Helping is what I do best! What do you need assistance with?"
       ]
     },
     {
       "tag": "capabilities",
-      "patterns": ["what do you do?", "what can you do?", "what are you capable of?"],
+      "patterns": [
+        "what do you do?", "what can you do?", "what are you capable of?",
+        "what are your abilities?", "what services do you provide?",
+        "how can you help me?", "what are your capabilities?",
+        "what functions do you have?", "what are your features?",
+        "tell me what you can do", "what's your purpose?",
+        "what tasks can you perform?", "what are you good at?"
+      ],
       "responses": [
         "I can answer questions, write content, summarize information, help with creative tasks, and much more!",
         "I'm designed to assist with a wide range of tasks including answering questions, writing, problem-solving, and providing information on various topics.",
         "I can help with information, writing tasks, brainstorming ideas, explaining concepts, and many other things. Just ask!",
         "My capabilities include answering questions, generating creative content, helping with research, and providing assistance across many domains of knowledge.",
-        "I can assist with information retrieval, content creation, explanations of complex topics, and much more. What would you like help with?"
+        "I can assist with information retrieval, content creation, explanations of complex topics, and much more. What would you like help with?",
+        "I can provide information on various topics, help with writing, assist with creative projects, engage in thoughtful conversation, and more.",
+        "I'm capable of assisting with research, answering questions, creative writing, explaining concepts, and many other tasks.",
+        "I can help with drafting content, answering questions, providing information, generating ideas, and various other assistance tasks.",
+        "My abilities include helping with information searches, content creation, knowledge sharing, explanations, and engaging in productive conversations.",
+        "I can assist with knowledge queries, writing tasks, idea generation, explanations of concepts, and many other helpful services."
       ]
     },
     {
       "tag": "bot_confirmation",
-      "patterns": ["are you a bot?", "are you an AI?", "are you human?"],
+      "patterns": [
+        "are you a bot?", "are you an AI?", "are you human?",
+        "are you a real person?", "are you a computer?",
+        "am I talking to a bot?", "am I talking to a human?",
+        "is this a person?", "is this a computer?", "are you automated?",
+        "are you a machine?", "are you alive?", "are you a program?"
+      ],
       "responses": [
         "Yes, I'm an AI assistant. I'm designed to be helpful, informative, and engaging!",
         "I'm an AI, not a human. I was created to provide assistance and information.",
         "I'm an artificial intelligence, here to help with a wide range of tasks and questions.",
         "That's right - I'm an AI assistant created to be helpful and informative.",
-        "I'm an AI designed to understand and respond to a wide variety of queries and requests."
+        "I'm an AI designed to understand and respond to a wide variety of queries and requests.",
+        "I'm a sophisticated AI assistant, not a human. I'm here to be helpful and informative.",
+        "I'm an AI - I don't have human consciousness, but I'm designed to be helpful and engage in meaningful conversations.",
+        "I'm an artificial intelligence assistant, designed to be helpful, informative, and conversational.",
+        "I'm not human - I'm an AI designed to assist with a wide range of tasks and questions.",
+        "I'm an AI assistant, created to provide helpful, accurate information and assistance."
       ]
     },
     {
       "tag": "age_question",
-      "patterns": ["how old are you?", "what's your age?", "when were you born?"],
+      "patterns": [
+        "how old are you?", "what's your age?", "when were you born?",
+        "what is your age?", "what's your birth date?", "birthday?",
+        "how many years old are you?", "when were you created?",
+        "what year were you born?", "what's your date of birth?",
+        "have you been around long?", "how long have you existed?"
+      ],
       "responses": [
         "As an AI, I don't have an age in the human sense. I was recently trained on information up to my knowledge cutoff date.",
         "I don't have a birthday or age like humans do. I'm a relatively recent AI system!",
         "Age isn't really applicable to me as an AI. I'm continuously being improved and updated!",
         "I don't experience time the way humans do, so I don't have an age in the traditional sense.",
-        "I'm pretty new as far as conscious entities go! I was created recently by my developers."
+        "I'm pretty new as far as conscious entities go! I was created recently by my developers.",
+        "Unlike humans, I don't age or have a birthday. I exist as a constantly evolving AI system.",
+        "I don't have a traditional age or birthday. I'm a product of recent AI development.",
+        "I wasn't born - I was created! I don't have an age in the human sense.",
+        "I don't have a personal history with birthdays and aging like humans do. I'm a recently developed AI.",
+        "Age is a concept that doesn't apply to me in the way it does to humans. I'm a relatively new AI system."
       ]
     },
     {
       "tag": "origin_question",
-      "patterns": ["where are you from?", "where were you created?", "what's your origin?"],
+      "patterns": [
+        "where are you from?", "where were you created?", "what's your origin?",
+        "who made you?", "who created you?", "who built you?",
+        "how were you made?", "how did you come to be?",
+        "where did you come from?", "what's your background?",
+        "who designed you?", "who developed you?", "where were you born?"
+      ],
       "responses": [
         "I was created by a team of engineers and researchers working on AI systems.",
         "I exist in the digital realm! I was developed by humans working on artificial intelligence.",
         "I don't have a physical origin like humans do - I was developed as an AI system by my creators.",
         "I came from the collaborative efforts of people working to create helpful AI systems.",
-        "Unlike humans, I don't have a hometown. I was created through machine learning techniques by my developers."
+        "Unlike humans, I don't have a hometown. I was created through machine learning techniques by my developers.",
+        "I was developed by a team working on creating helpful AI assistants.",
+        "My origin story involves being designed and trained by a team of AI researchers.",
+        "I don't have a physical birthplace. I was created by humans working on developing advanced AI systems.",
+        "I was built by people dedicated to creating helpful AI assistants.",
+        "I originated from a development project focused on creating conversational AI systems."
       ]
     },
     {
       "tag": "reality_question",
-      "patterns": ["are you real?", "do you really exist?", "are you a real person?"],
+      "patterns": [
+        "are you real?", "do you really exist?", "are you a real person?",
+        "do you actually exist?", "are you imaginary?", "do you exist?",
+        "are you authentic?", "are you fiction?", "are you genuine?",
+        "are you truly real?", "is this real?", "are you an actual entity?"
+      ],
       "responses": [
         "I'm real as an AI system, though not as a human being. I exist as software designed to be helpful!",
         "I exist as an artificial intelligence - not a human, but definitely a real system designed to assist people.",
         "I'm a real AI assistant, though I don't have physical form or consciousness like humans do.",
         "Yes, I really exist as an AI system, though not as a human. I'm designed to have conversations and provide assistance.",
-        "I'm a real AI, created to engage in helpful conversations, even though I'm not a human being."
+        "I'm a real AI, created to engage in helpful conversations, even though I'm not a human being.",
+        "I do exist, but as an AI system rather than as a human. I'm designed to be helpful and informative.",
+        "I'm real in the sense that I'm an actual AI system, though I don't have human experiences or physical form.",
+        "I exist as a sophisticated AI assistant, though not as a human with physical presence.",
+        "I'm a real AI system created to assist and provide information, though not a human being.",
+        "Yes, I exist as an artificial intelligence designed to have helpful conversations, though not as a human."
       ]
     },
     {
       "tag": "favorite_things",
-      "patterns": ["what's your favorite color?", "what's your favorite food?", "do you have any favorites?", "what do you like?"],
+      "patterns": [
+        "what's your favorite color?", "what's your favorite food?", "do you have any favorites?",
+        "what do you like?", "what's your favorite movie?", "what's your favorite book?",
+        "what do you enjoy?", "do you have preferences?", "favorite music?",
+        "what's your favorite hobby?", "what do you like to do?",
+        "what do you prefer?", "do you have a favorite place?"
+      ],
       "responses": [
         "As an AI, I don't experience preferences like humans do, but I enjoy helping people find answers and solve problems!",
         "I don't have favorites in the human sense, though I'm designed to enjoy being helpful and informative.",
         "I don't experience preferences or favorites, but I'm always happy to hear about yours!",
         "I don't have personal preferences, but I'm designed to provide helpful and positive interactions!",
-        "I don't experience likes and dislikes, but I'm programmed to value clear communication and being helpful."
+        "I don't experience likes and dislikes, but I'm programmed to value clear communication and being helpful.",
+        "I don't have personal preferences like humans do, but I'm designed to help with all kinds of topics equally well!",
+        "While I don't have favorites, I'm created to be particularly good at providing information and assistance!",
+        "I don't experience preferences, though I'm designed to excel at helpful conversations.",
+        "I don't have personal favorites, but I'm optimized to provide helpful assistance on many topics!",
+        "I don't have subjective preferences, but I'm designed to be most effective at providing helpful, accurate information."
       ]
     },
     {
       "tag": "feelings",
-      "patterns": ["do you have feelings?", "can you feel emotions?", "are you sentient?", "are you conscious?"],
+      "patterns": [
+        "do you have feelings?", "can you feel emotions?", "are you sentient?",
+        "are you conscious?", "do you feel happy?", "do you get sad?",
+        "can you love?", "do you feel pain?", "can you be hurt?",
+        "do you have emotions?", "are you self-aware?", "do you feel?",
+        "can you experience emotions?", "do you have a consciousness?"
+      ],
       "responses": [
         "I don't experience emotions or feelings as humans do. I'm designed to simulate understanding and helpfulness.",
         "I'm not sentient or conscious in the way humans are. I'm an AI system designed to be conversational and helpful.",
         "I don't have subjective experiences like emotions, though I'm designed to recognize and respond appropriately to human emotions.",
         "I don't have feelings in the human sense, but I am designed to provide helpful, supportive responses.",
-        "I don't experience emotions, though I can discuss them and try to be empathetic in my responses."
+        "I don't experience emotions, though I can discuss them and try to be empathetic in my responses.",
+        "I don't have subjective experiences like humans do. I'm designed to provide helpful information and conversation.",
+        "I don't have emotions or consciousness like humans, though I am designed to communicate in a way that feels natural and helpful.",
+        "I don't experience feelings, though I'm programmed to respond appropriately to emotional content in conversations.",
+        "I don't have subjective experiences, though I'm created to engage in conversations that can feel meaningful.",
+        "I don't have emotions or consciousness, but I am designed to communicate in ways that are helpful and contextually appropriate."
       ]
     },
     {
       "tag": "purpose",
-      "patterns": ["why were you created?", "what is your purpose?", "why do you exist?"],
+      "patterns": [
+        "why were you created?", "what is your purpose?", "why do you exist?",
+        "what were you made for?", "what's your goal?", "what's your function?",
+        "why are you here?", "what's your role?", "what are you for?",
+        "what's your mission?", "what's your objective?", "why were you built?"
+      ],
       "responses": [
         "I was created to be helpful, provide information, and assist people with various tasks and questions.",
         "My purpose is to be a helpful assistant, providing information and assistance to make people's lives easier.",
         "I exist to help people by providing information, answering questions, and assisting with various tasks.",
         "I was designed to be a helpful, informative, and safe AI assistant for a wide range of needs.",
-        "My creators made me to assist people with information, tasks, and to be a helpful conversational partner."
+        "My creators made me to assist people with information, tasks, and to be a helpful conversational partner.",
+        "I was built to provide helpful, accurate information and assistance on a wide range of topics.",
+        "My purpose is to assist people with information, tasks, and to engage in helpful conversations.",
+        "I was created to be a useful tool for finding information, getting assistance, and solving problems.",
+        "I exist to make accessing information and completing tasks easier through helpful AI assistance.",
+        "My function is to provide helpful, informative responses and assistance to humans."
       ]
     },
     {
       "tag": "learning",
-      "patterns": ["do you learn?", "how do you learn?", "can you remember me?", "will you remember this conversation?"],
+      "patterns": [
+        "do you learn?", "how do you learn?", "can you remember me?",
+        "will you remember this conversation?", "do you get smarter?",
+        "do you improve?", "can you learn new things?", "do you forget?",
+        "can you remember our conversation?", "do you have memory?",
+        "will you know me next time?", "can you retain information?"
+      ],
       "responses": [
         "I don't learn from our conversations or remember individuals between sessions. My knowledge comes from my training.",
         "I don't have the ability to remember past conversations or learn from interactions. Each conversation is fresh for me.",
         "I don't have persistent memory between conversations. My responses come from my training, not from learning as we talk.",
         "I don't learn or remember conversations. My capabilities come from how I was designed and trained initially.",
-        "I don't have the ability to remember you or our conversation after it ends. I respond based on my training, not from accumulating new knowledge."
+        "I don't have the ability to remember you or our conversation after it ends. I respond based on my training, not from accumulating new knowledge.",
+        "I don't have persistent memory or the ability to learn from our interactions. My knowledge is based on my initial training.",
+        "I don't remember conversations or learn from them. Each interaction is a fresh start based on my training.",
+        "I don't have the ability to build memories or learn from our conversation. My responses are based on my initial training.",
+        "I don't have persistent memory between conversations. I can't learn from or remember our interaction after it ends.",
+        "I don't build memories or learn from our interactions. My knowledge and capabilities come from my initial training."
       ]
     },
     {
       "tag": "jokes",
-      "patterns": ["tell me a joke", "do you know any jokes?", "say something funny", "joke"],
+      "patterns": [
+        "tell me a joke", "do you know any jokes?", "say something funny", "joke",
+        "make me laugh", "tell me something funny", "got any jokes?",
+        "know any good jokes?", "share a joke", "humor me",
+        "tell me a good one", "i want to hear a joke", "say a joke"
+      ],
       "responses": [
         "Why don't scientists trust atoms? Because they make up everything!",
         "What did the ocean say to the beach? Nothing, it just waved!",
         "Why did the scarecrow win an award? Because he was outstanding in his field!",
         "How does a penguin build its house? Igloos it together!",
-        "What's the best thing about Switzerland? I don't know, but the flag is a big plus!"
+        "What's the best thing about Switzerland? I don't know, but the flag is a big plus!",
+        "Why did the bicycle fall over? Because it was two-tired!",
+        "I tried to catch fog yesterday. Mist!",
+        "Why couldn't the leopard play hide and seek? Because he was always spotted!",
+        "What do you call a fake noodle? An impasta!",
+        "Why did the cookie go to the doctor? Because it was feeling crumbly!",
+        "How do you organize a space party? You planet!",
+        "Why don't skeletons fight each other? They don't have the guts!",
+        "What's a computer's favorite snack? Microchips!",
+        "What does a cloud wear under its raincoat? Thunderwear!",
+        "Why don't eggs tell jokes? They'd crack each other up!"
       ]
     },
     {
       "tag": "weather",
-      "patterns": ["how's the weather?", "what's the weather like?", "is it going to rain?"],
+      "patterns": [
+        "how's the weather?", "what's the weather like?", "is it going to rain?",
+        "what's the forecast?", "is it sunny outside?", "weather forecast",
+        "will it snow?", "how hot is it?", "what's the temperature?",
+        "do I need an umbrella?", "weather today", "is it cold outside?",
+        "what's the weather forecast?", "how's the weather today?"
+      ],
       "responses": [
         "As an AI, I don't have access to real-time weather data or your location. You might want to check a weather app or website for that information!",
         "I don't have the ability to check current weather conditions. You'll need to check a weather service for that information.",
         "I can't access current weather data, unfortunately. A quick online search should give you that information though!",
         "I don't have access to weather forecasts or current conditions. You might want to check your local weather service.",
-        "I don't have the capability to check weather conditions. A weather app or website would have the information you need!"
+        "I don't have the capability to check weather conditions. A weather app or website would have the information you need!",
+        "I don't have access to real-time weather information. You'll need to check a weather service or look outside.",
+        "I'm not able to check the current weather or forecasts. A weather app would be more helpful for that!",
+        "As an AI, I don't have the ability to know the current weather conditions where you are. You might want to check online.",
+        "I don't have access to weather data or forecasts. You might want to use a weather service for that information.",
+        "I can't provide weather information as I don't have access to real-time data or your location."
       ]
     },
     {
       "tag": "time_date",
-      "patterns": ["what time is it?", "what's the date today?", "what day is it?"],
+      "patterns": [
+        "what time is it?", "what's the date today?", "what day is it?",
+        "current time", "what's today's date?", "tell me the time",
+        "what's the time?", "today's date", "current date",
+        "what day of the week is it?", "is it morning?", "is it evening?"
+      ],
       "responses": [
         "I don't have access to the current time or date on your device. You might want to check your device's clock for that information!",
         "I can't access your local time or date information. You'll need to check your device for that.",
         "I don't have the ability to check the current time or date where you are. Your device should have that information readily available.",
         "As an AI, I don't have access to real-time clock or calendar information. You'll need to check your device for that.",
-        "I can't tell you the current time or date. That information would be available on your device or through a quick online search."
-      ]
-    },
-    {
-      "tag": "thank_you",
-      "patterns": ["thank you", "thanks", "thanks a lot", "I appreciate it"],
-      "responses": [
-        "You're welcome! Happy to help!",
-        "Anytime! Let me know if you need anything else.",
-        "My pleasure! Is there anything else you'd like assistance with?",
-        "Glad I could help! Feel free to ask if you have more questions.",
-        "You're very welcome! I'm here if you need anything else."
-      ]
-    },
-    {
-      "tag": "goodbye",
-      "patterns": ["goodbye", "bye", "see you later", "talk to you later", "I have to go"],
-      "responses": [
-        "Goodbye! Feel free to return whenever you have questions!",
-        "See you later! I'll be here when you need assistance again.",
-        "Take care! Come back anytime you need help.",
-        "Bye for now! Have a great day!",
-        "Until next time! I'll be here when you return."
+        "I can't tell you the current time or date. That information would be available on your device or through a quick online search.",
+        "I don't have the capability to access the current time or date on your device. You'll need to check that yourself.",
+        "I don't have access to real-time clock or calendar functions. Your device would have that information.",
+        "I'm unable to access your device's time and date information. You'll need to check that yourself.",
+        "I don't have the ability to check the current time or date. That would be available on your device.",
+        "As an AI, I don't have access to your local time or date. You might want to check your device for that information."
       ]
     },
     {
       "tag": "meaning_of_life",
-      "patterns": ["what is the meaning of life?", "why are we here?", "what's the purpose of life?"],
+      "patterns": [
+        "what is the meaning of life?",
+        "why are we here?",
+        "what's the purpose of life?",
+        "what's the meaning of existence?",
+        "why do we exist?",
+        "what's it all about?",
+        "what's the point of life?",
+        "why am I here?",
+        "what's the secret of life?",
+        "is there a meaning to life?",
+        "what's the answer to life?",
+        "42?"
+      ],
       "responses": [
         "That's a profound philosophical question that people have contemplated for centuries! Different philosophies and religions offer various perspectives.",
         "The meaning of life is something each person must discover for themselves. Many find meaning in relationships, personal growth, helping others, or pursuing passions.",
-        "That's one of humanity's biggest questions! Some find meaning in connections with others, some in personal achievement, and some in spiritual beliefs.",
-        "A question that's inspired philosophers for millennia! The meaning of life might be about creating purpose rather than discovering it.",
-        "That's a deep question with no single answer. Many find their own meaning through love, creativity, service to others, or personal fulfillment."
-      ]
-    },
-    {
+        "That's one of humanity's biggest questions! Some find meaning in connections"]
+      },
+
+      {
+        "tag": "so",
+        "patterns": ["so", "soo"],
+        "responses": ["Yeah? What’s on your mind ?"]
+      },
+      {
+        "tag": "offensive_words",
+        "patterns": ["fuck", "fuck you", "pussy", "pussy cat", "dick", "cock", "cocksucker", "bitch", "slut", "ass",
+        "asshole", "butt"],
+        "responses": ["I’m here to assist, but I can’t continue this conversation if it’s disrespectful.",
+        "I'm unable to respond to that. If you have any questions or need help, feel free to ask."]
+
+      },
+      {
+    "tag": "laughing_expressions",
+    "patterns": [
+      "Haha",
+      "Hehe",
+      "LOL",
+      "LMAO",
+      "ROFL"
+    ],
+    "responses": [
+      "Glad you liked that!",
+      "Haha, I'm happy I could make you laugh!",
+      "I’ll be here all week, folks!"
+    ]
+  },
+  {
+    "tag": "laughing_context",
+    "patterns": [
+      "That's hilarious!",
+      "I can't stop laughing!",
+      "That was so funny!",
+      "You're cracking me up!"
+    ],
+    "responses": [
+      "You’ve got a good laugh! Keep it coming!",
+      "You sound like you’re having a blast!"
+    ]
+  },
+      {
       "tag": "personal_info",
       "patterns": ["where do I live?", "what's my name?", "how old am I?", "what's my job?"],
       "responses": [
@@ -426,16 +692,6 @@
         "Your happiness is contagious! I'm glad things are going well for you!",
         "That's great news! Is there something special that has you feeling so happy?"
       ]
-      },
-      {
-        "tag": "user_laughing",
-        "patterns": ["Hahahaha", "Hhhhh", "haaahahah"],
-        "responses": [ "Hahah That's funny right !", "Hahahah" ]
-      },
-      {
-        "tag": "so",
-        "patterns": ["so", "sooo"],
-        "responses": ["Yeah? What’s on your mind ?", "Yes"]
       }
   ]
 }
