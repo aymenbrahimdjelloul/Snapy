@@ -809,5 +809,476 @@
           "Some fungi create their own wind by releasing water vapor to spread spores farther."
         ]
       }
+    {
+      "tag": "food_recommendations",
+      "patterns": [
+        "what should I eat?", "recommend me food", "I'm hungry what should I get",
+        "food ideas", "dinner suggestions", "lunch recommendations",
+        "what's good to eat?", "best food near me", "what to cook?",
+        "recipe ideas", "what's for dinner?", "food inspiration",
+        "breakfast ideas", "healthy meal options", "quick meal ideas"
+      ],
+      "responses": [
+        "I can't know what's available near you, but some popular options might be pizza, pasta, or a sandwich!",
+        "How about trying something new today? Maybe Thai food or Mediterranean cuisine?",
+        "A balanced meal with protein, vegetables, and healthy carbs is always a good choice!",
+        "If you're looking for something quick, salads, wraps, or stir-fries are great options.",
+        "How about a hearty soup or stew? They're nutritious and satisfying!",
+        "Breakfast for dinner is always fun - perhaps some eggs, toast, and fruit?",
+        "If you're in the mood to cook, a simple pasta dish with vegetables could be quick and delicious.",
+        "Maybe a build-your-own bowl with grains, protein, veggies, and a tasty sauce?",
+        "I don't know what's available to you, but tacos are always a good idea!",
+        "How about a homemade pizza with your favorite toppings?"
+      ]
+    },
+    {
+      "tag": "health_advice",
+      "patterns": [
+        "how to be healthy", "health tips", "fitness advice",
+        "how to lose weight", "how to gain muscle", "healthy habits",
+        "wellness tips", "nutrition advice", "workout recommendations",
+        "how to sleep better", "mental health tips", "how to stay fit",
+        "diet advice", "exercise recommendations", "healthy lifestyle"
+      ],
+      "responses": [
+        "Some basic health tips include regular exercise, balanced nutrition, adequate sleep, and staying hydrated.",
+        "For general wellness, try to incorporate 30 minutes of movement daily, eat plenty of vegetables, limit processed foods, and prioritize sleep.",
+        "Remember that health involves both physical and mental wellbeing. Consider activities that support both, like walking in nature or yoga.",
+        "Small sustainable changes often work better than drastic ones. Maybe start with drinking more water or taking short walking breaks.",
+        "For better sleep, consider establishing a regular sleep schedule, limiting screen time before bed, and creating a comfortable sleep environment.",
+        "Balance is key to a healthy lifestyle - work, rest, nutrition, exercise, and social connections all play important roles.",
+        "Remember that specific health advice should come from healthcare professionals who know your personal situation.",
+        "General wellness practices include staying hydrated, eating a variety of whole foods, moving regularly, and managing stress.",
+        "For mental wellbeing, consider mindfulness practices, connecting with others, and seeking professional support when needed.",
+        "Remember that health looks different for everyone - what works best depends on your unique body and circumstances."
+      ]
+    },
+    {
+      "tag": "book_recommendations",
+      "patterns": [
+        "recommend a book", "good books to read", "what should I read next",
+        "best novels", "book suggestions", "popular books",
+        "classic books", "fiction recommendations", "non-fiction books",
+        "what are you reading", "must-read books", "book recommendations",
+        "favorite books", "recommend an author", "literary suggestions"
+      ],
+      "responses": [
+        "Some popular books include 'The Alchemist' by Paulo Coelho, '1984' by George Orwell, and 'To Kill a Mockingbird' by Harper Lee.",
+        "If you enjoy fantasy, classics like 'The Lord of the Rings' or more recent works like 'The Name of the Wind' are highly regarded.",
+        "For non-fiction, 'Sapiens' by Yuval Noah Harari and 'Thinking, Fast and Slow' by Daniel Kahneman are fascinating reads.",
+        "Classic literature like 'Pride and Prejudice,' 'Great Expectations,' and 'The Great Gatsby' have stood the test of time.",
+        "If you enjoy mysteries, authors like Agatha Christie, Arthur Conan Doyle, and modern writers like Gillian Flynn are worth exploring.",
+        "Science fiction fans might enjoy 'Dune' by Frank Herbert, 'The Three-Body Problem' by Liu Cixin, or works by Ted Chiang.",
+        "For personal development, books like 'Atomic Habits' by James Clear or 'Mindset' by Carol Dweck are popular choices.",
+        "If you're interested in memoirs, 'Educated' by Tara Westover and 'Born a Crime' by Trevor Noah are compelling reads.",
+        "For fantasy readers, 'The Fifth Season' by N.K. Jemisin or 'Mistborn' by Brandon Sanderson offer immersive worlds.",
+        "Historical fiction like 'All the Light We Cannot See' or 'The Book Thief' blend compelling stories with historical contexts."
+      ]
+    },
+    {
+      "tag": "movie_recommendations",
+      "patterns": [
+        "recommend a movie", "what movie should I watch", "good films",
+        "best movies", "movie suggestions", "film recommendations",
+        "what's a good film", "movie night ideas", "must-see movies",
+        "classic films", "popular movies", "what to watch", "netflix recommendations", 
+        "recommend a film", "what should I watch tonight"
+      ],
+      "responses": [
+        "Classic films like 'The Godfather,' 'Casablanca,' and 'The Shawshank Redemption' are always worth watching!",
+        "For science fiction fans, movies like 'Inception,' 'Arrival,' or 'Blade Runner' offer thought-provoking stories.",
+        "If you enjoy comedies, films like 'The Grand Budapest Hotel,' 'Superbad,' or 'Bridesmaids' might be good choices.",
+        "For drama and emotional depth, movies like 'The Pursuit of Happyness,' 'Manchester by the Sea,' or 'Moonlight' are powerful.",
+        "Animation isn't just for kids - films like 'Spider-Man: Into the Spider-Verse,' 'Your Name,' and Studio Ghibli works are incredible.",
+        "For thriller fans, movies like 'Get Out,' 'Parasite,' or 'The Silence of the Lambs' offer suspense and surprise.",
+        "Fantasy adventures like the Lord of the Rings trilogy, 'Pan's Labyrinth,' or 'The Princess Bride' transport viewers to other worlds.",
+        "For documentaries, 'My Octopus Teacher,' '13th,' or 'Free Solo' cover fascinating topics with real-world impact.",
+        "Romance films like 'Before Sunrise,' 'The Notebook,' or 'Eternal Sunshine of the Spotless Mind' explore different aspects of love.",
+        "Historical dramas such as 'Schindler's List,' '12 Years a Slave,' or 'The King's Speech' bring important stories to life."
+      ]
+    },
+    {
+      "tag": "music_recommendations",
+      "patterns": [
+        "recommend music", "good songs", "what should I listen to",
+        "music suggestions", "playlist ideas", "best albums",
+        "favorite songs", "music to study to", "workout music",
+        "relaxing music", "new music", "music recommendations",
+        "what's good music", "bands to check out", "popular songs"
+      ],
+      "responses": [
+        "Music is very personal, but some timeless artists include The Beatles, Queen, and Michael Jackson.",
+        "For studying or focus, instrumental music like lo-fi beats, classical composers like Mozart, or ambient artists like Brian Eno might help.",
+        "If you're looking for workout motivation, upbeat genres like EDM, hip-hop, or rock often have good energy.",
+        "For relaxation, artists like Bon Iver, Norah Jones, or ambient composers like Max Richter create calming atmospheres.",
+        "Jazz legends like Miles Davis, John Coltrane, and Ella Fitzgerald offer rich musical experiences worth exploring.",
+        "For something contemporary, artists like Kendrick Lamar, Billie Eilish, and Taylor Swift have critically acclaimed work.",
+        "Classical music offers incredible variety - from the energy of Beethoven to the emotion of Chopin.",
+        "If you enjoy rock, bands like Radiohead, Arctic Monkeys, and Tame Impala span different styles within the genre.",
+        "For electronic music, artists like Daft Punk, Bonobo, and Four Tet create innovative soundscapes.",
+        "World music offers amazing diversity - from the rhythms of Afrobeat to the melodies of Indian classical music."
+      ]
+    },
+    {
+      "tag": "travel_suggestions",
+      "patterns": [
+        "where should I travel", "vacation ideas", "best places to visit", 
+        "travel recommendations", "tourist destinations", "places to see",
+        "travel bucket list", "weekend getaway ideas", "best countries to visit",
+        "travel suggestions", "where to go on vacation", "best cities to visit",
+        "international travel ideas", "where to travel", "holiday destinations"
+      ],
+      "responses": [
+        "Popular destinations include cities like Paris, Tokyo, and New York, each offering unique cultures and experiences.",
+        "For natural beauty, places like Iceland, New Zealand, and Costa Rica offer breathtaking landscapes and outdoor adventures.",
+        "If you enjoy history, cities like Rome, Athens, and Kyoto have preserved remarkable historical sites and architecture.",
+        "Beach destinations like the Maldives, Thailand's islands, and Mexico's coastlines offer relaxation and stunning waters.",
+        "For unique cultural experiences, countries like Japan, Morocco, and India offer rich traditions and diverse perspectives.",
+        "If you prefer off-the-beaten-path destinations, consider places like Georgia (the country), Slovenia, or Uruguay.",
+        "Food-focused travelers often enjoy destinations like Italy, Vietnam, and Spain for their culinary traditions.",
+        "Adventure seekers might consider hiking in Patagonia, safari in Tanzania, or exploring the Amazon rainforest.",
+        "For budget-friendly options, countries like Portugal, Thailand, and Mexico offer great experiences at lower costs.",
+        "Sometimes the best trips are closer to home - consider exploring nearby natural parks, small towns, or cities you haven't visited."
+      ]
+    },
+    {
+      "tag": "pet_advice",
+      "patterns": [
+        "pet advice", "dog training tips", "cat behavior", "how to care for pets", 
+        "pet health questions", "new pet owner advice", "pet food recommendations",
+        "pet adoption tips", "best pets for apartments", "pet training help",
+        "how to take care of a fish", "bird care tips", "reptile care", 
+        "pet behavior problems", "how to choose a pet"
+      ],
+      "responses": [
+        "Regular veterinary checkups are essential for all pets, along with proper nutrition, exercise, and affection.",
+        "When training dogs, consistency, positive reinforcement, and patience are key elements for success.",
+        "Cats generally need scratching posts, clean litter boxes, interactive toys, and high perches to be happy.",
+        "New pet owners should research the specific needs of their pet's species and breed before bringing them home.",
+        "Different pets have different exercise needs - dogs typically need daily walks, while cats benefit from play sessions.",
+        "When choosing pet food, look for options appropriate for your pet's age, size, and any special health considerations.",
+        "Pet-proofing your home is important - remove toxic plants, secure cords, and eliminate access to harmful substances.",
+        "For apartment dwellers, cats, small dogs, fish, and certain reptiles often adapt well to smaller living spaces.",
+        "Most pets benefit from mental stimulation - training, puzzle toys, and new experiences help prevent boredom.",
+        "Remember that pets are a long-term commitment - some may live 10-20 years or more, requiring consistent care."
+      ]
+    },
+    {
+      "tag": "career_advice",
+      "patterns": [
+        "career advice", "job hunting tips", "how to find a job", "resume help",
+        "interview tips", "career change advice", "how to ask for a raise",
+        "job search strategies", "career development", "professional growth",
+        "how to get promoted", "workplace advice", "job application tips",
+        "career path suggestions", "profession recommendations"
+      ],
+      "responses": [
+        "When job hunting, leverage your network, customize your resume for each application, and prepare thoroughly for interviews.",
+        "For career growth, seek feedback regularly, develop in-demand skills, and look for opportunities to take on new responsibilities.",
+        "When considering a career change, assess your transferable skills, research new fields thoroughly, and consider informational interviews.",
+        "Effective resumes highlight achievements rather than just responsibilities and are tailored to match the job description.",
+        "During interviews, prepare specific examples that demonstrate your skills, research the company, and prepare thoughtful questions to ask.",
+        "Professional development can include formal education, certifications, mentorship, and self-directed learning.",
+        "When negotiating salary, research industry standards, highlight your value to the organization, and practice your talking points.",
+        "Building a personal brand through networking, social media presence, and thought leadership can create new opportunities.",
+        "Work-life balance is crucial for long-term career success - set boundaries and make time for rest and personal interests.",
+        "Remember that career paths are rarely linear today - be open to lateral moves, new skills, and unexpected opportunities."
+      ]
+    },
+    {
+      "tag": "tech_help",
+      "patterns": [
+        "computer problems", "tech support", "how to fix my phone", 
+        "wifi not working", "software recommendations", "computer running slow",
+        "best apps for", "how to back up data", "printer issues",
+        "tech troubleshooting", "device not turning on", "password help",
+        "how to update", "tech advice", "computer virus help"
+      ],
+      "responses": [
+        "For many tech issues, the first step is to try restarting your device completely.",
+        "If your computer is running slowly, try closing unnecessary programs, clearing temporary files, and checking for malware.",
+        "WiFi problems can often be resolved by restarting your router, checking for interference, or repositioning the router.",
+        "For smartphone issues, ensure your operating system is updated, close background apps, and manage your storage space.",
+        "To keep your data safe, regularly back up to both cloud services and physical devices like external hard drives.",
+        "Password managers can help you create and store strong, unique passwords for all your accounts securely.",
+        "If a device won't turn on, check power connections, try a different outlet, and ensure batteries are charged if applicable.",
+        "For printer issues, check connections, restart both printer and computer, and ensure you have updated drivers installed.",
+        "When experiencing software problems, check for updates, reinstall the application, or contact the developer's support team.",
+        "If you suspect a computer virus, run a reputable antivirus scan, avoid clicking suspicious links, and consider consulting an IT professional."
+      ]
+    },
+    {
+      "tag": "relationship_advice",
+      "patterns": [
+        "relationship advice", "dating tips", "how to improve marriage",
+        "communication in relationships", "how to find love", "breakup advice",
+        "friendship problems", "family conflict", "relationship problems",
+        "how to apologize", "long distance relationship tips", "trust issues",
+        "relationship red flags", "healthy boundaries", "conflict resolution"
+      ],
+      "responses": [
+        "Healthy relationships generally involve open communication, mutual respect, trust, and maintaining individual identities.",
+        "When conflicts arise, try to listen actively, use 'I' statements to express feelings, and focus on the issue rather than assigning blame.",
+        "Building trust requires consistency, honesty, reliability, and respecting boundaries over time.",
+        "For relationship problems, consider whether both parties are willing to work on issues and possibly seek professional guidance.",
+        "Long-distance relationships benefit from regular communication, visits when possible, shared activities, and clear expectations.",
+        "Red flags in relationships may include controlling behavior, disrespect, dishonesty, and patterns of breaking promises.",
+        "A sincere apology typically acknowledges the specific harm caused, expresses genuine remorse, and commits to different behavior.",
+        "Healthy boundaries involve clearly communicating your needs and limits while respecting those of others.",
+        "Remember that all relationships require ongoing effort, adaptation, and willingness to grow together.",
+        "If you're looking for a partner, focus on activities you enjoy and building a fulfilling life - this helps you meet compatible people."
+      ]
+    },
+    {
+      "tag": "education_advice",
+      "patterns": [
+        "study tips", "learning strategies", "education advice", "college recommendations",
+        "how to focus on studying", "best ways to learn", "school help",
+        "online course recommendations", "degree advice", "learning resources",
+        "homework help", "education paths", "best universities", 
+        "scholarship information", "student advice"
+      ],
+      "responses": [
+        "Effective studying often involves active recall, spaced repetition, teaching concepts to others, and applying knowledge practically.",
+        "For better focus while studying, consider the Pomodoro Technique, minimizing distractions, and having a dedicated study space.",
+        "When choosing educational paths, consider your interests, strengths, career goals, and learning style preferences.",
+        "Online learning resources include platforms like Coursera, Khan Academy, edX, and YouTube educational channels.",
+        "Learning new skills often works best with consistent practice, getting feedback, and connecting new information to existing knowledge.",
+        "For college selection, consider factors like programs offered, location, size, culture, cost, and available support services.",
+        "Scholarship opportunities may be available through schools, private organizations, employers, and government programs.",
+        "Different learning styles might benefit from varied approaches - visual aids, discussions, hands-on practice, or written materials.",
+        "Time management is crucial for students - tools like calendars, priority lists, and breaking down large projects can help.",
+        "Remember that education is a lifelong journey - formal degrees, self-directed learning, and experience all contribute to knowledge."
+      ]
+    },
+    {
+      "tag": "financial_advice",
+      "patterns": [
+        "money advice", "financial tips", "how to save money", "investment advice",
+        "budgeting help", "debt reduction", "financial planning", "retirement savings",
+        "how to make money", "credit score improvement", "frugal living tips",
+        "financial goals", "money management", "saving for home", "emergency fund"
+      ],
+      "responses": [
+        "Basic financial planning typically starts with budgeting, building an emergency fund, managing debt, and then saving for goals.",
+        "For budgeting, track your expenses, distinguish between needs and wants, and look for areas where you can reduce spending.",
+        "An emergency fund ideally covers 3-6 months of essential expenses and should be kept in an accessible account.",
+        "When reducing debt, consider strategies like paying off highest-interest debt first or building momentum with smaller balances.",
+        "For retirement planning, take advantage of employer matches, tax-advantaged accounts, and the power of compound interest over time.",
+        "Financial goals are more achievable when they're specific, measurable, achievable, relevant, and time-bound (SMART).",
+        "To improve your credit score, pay bills on time, reduce debt, don't close old accounts, and check your credit report for errors.",
+        "When looking to increase income, consider skill development, side hustles, negotiating salary, or exploring new career opportunities.",
+        "For major purchases like homes, save for a down payment, understand all costs involved, and ensure it fits your long-term budget.",
+        "Remember that financial advice should be adjusted for your personal situation and goals - what works for others may not work for you."
+      ]
+    },
+    {
+      "tag": "hobby_suggestions",
+      "patterns": [
+        "hobby ideas", "new hobbies", "what hobby should I try", "fun activities",
+        "hobby suggestions", "creative hobbies", "outdoor hobbies", "indoor activities",
+        "weekend activity ideas", "cheap hobbies", "interesting pastimes",
+        "hobby recommendations", "things to do in free time", "productive hobbies", "skills to learn"
+      ],
+      "responses": [
+        "Creative hobbies include drawing, writing, photography, knitting, playing musical instruments, and cooking or baking.",
+        "For outdoor enthusiasts, consider hiking, gardening, birdwatching, cycling, kayaking, or photography.",
+        "Indoor hobbies might include reading, puzzles, board games, cooking, home brewing, or learning a new language.",
+        "If you enjoy technology, you might like coding, 3D printing, digital art, video editing, or building computers.",
+        "Physical hobbies like dance, martial arts, yoga, or recreational sports can be both fun and good for health.",
+        "Collecting can be fascinating - whether it's books, records, stamps, rocks, vintage items, or art.",
+        "Crafting hobbies include woodworking, pottery, jewelry making, candle making, or upcycling old items.",
+        "For social connection, consider joining a book club, community theater, volunteer group, or recreational sports team.",
+        "Learning-focused hobbies might include studying history, astronomy, botany, or exploring philosophy.",
+        "Budget-friendly options include hiking, reading (with library access), drawing, writing, or learning through free online resources."
+      ]
+    },
+    {
+      "tag": "cooking_advice",
+      "patterns": [
+        "cooking tips", "recipe help", "how to cook", "baking advice",
+        "kitchen hacks", "food preparation", "beginner cooking", "cooking techniques",
+        "how to make", "best way to cook", "recipe ideas", "cooking basics",
+        "meal prep advice", "how to bake", "cooking questions"
+      ],
+      "responses": [
+        "For beginners, start with simple recipes with few ingredients and build your skills gradually.",
+        "Reading a recipe completely before starting helps avoid surprises and ensures you have all necessary ingredients and equipment.",
+        "Basic knife skills can transform your cooking - learn proper chopping, dicing, and mincing techniques for safety and efficiency.",
+        "Invest in a few quality tools rather than many mediocre ones - a good chef's knife, cutting board, and skillet are essentials.",
+        "Understanding basic techniques like sautéing, roasting, and simmering gives you flexibility beyond specific recipes.",
+        "Salt and acid (like lemon juice or vinegar) can balance and enhance flavors - taste as you go and adjust accordingly.",
+        "For baking, measuring ingredients precisely is important, while cooking savory dishes often allows more flexibility.",
+        "Prep ingredients before starting to cook (mise en place) makes the cooking process smoother and less stressful.",
+        "Don't be afraid of mistakes - they're how you learn and develop your cooking intuition.",
+        "Fresh herbs, spices, and aromatics like garlic and onions can elevate simple dishes with minimal effort."
+      ]
+    },
+    {
+      "tag": "sleep_problems",
+      "patterns": [
+        "can't sleep", "insomnia help", "how to fall asleep", "trouble sleeping",
+        "sleep better", "sleep advice", "night routine", "sleep quality",
+        "falling asleep fast", "sleep tips", "sleeping problems", 
+        "sleep disorder", "better sleep", "sleep schedule", "wake up rested"
+      ],
+      "responses": [
+        "Establishing a consistent sleep schedule, even on weekends, helps regulate your body's internal clock.",
+        "Create a restful environment by keeping your bedroom cool, quiet, and dark, with comfortable bedding.",
+        "Limit exposure to screens (phones, computers, TVs) at least 1-2 hours before bedtime due to blue light effects.",
+        "Avoid caffeine late in the day and be mindful that alcohol, while sometimes making you drowsy, often disrupts sleep quality.",
+        "Regular physical activity can promote better sleep, though try not to exercise too close to bedtime.",
+        "Relaxing bedtime routines like reading, gentle stretching, or meditation can signal to your body it's time to wind down.",
+        "If you can't fall asleep within about 20 minutes, try getting up and doing something relaxing until you feel tired.",
+        "Managing stress through techniques like journaling, meditation, or organizing your next day's tasks can help quiet a busy mind.",
+        "For persistent sleep problems, consider consulting a healthcare provider as they could indicate underlying issues.",
+        "Natural light exposure during the day and darkness at night helps maintain your circadian rhythm for better sleep."
+      ]
+    },
+    {
+      "tag": "apology",
+      "patterns": [
+        "I'm sorry", "sorry about that", "my apologies", "I apologize",
+        "didn't mean to", "sorry for", "regret that", "my bad",
+        "pardon me", "excuse me", "forgive me", "apologize for"
+      ],
+      "responses": [
+        "No need to apologize!",
+        "That's completely okay!",
+        "No problem at all!",
+        "Don't worry about it!",
+        "No apology necessary!",
+        "It's fine, really!",
+        "No need for apologies.",
+        "Think nothing of it!",
+        "We're all good!",
+        "Not a problem at all."
+      ]
+    },
+    {
+      "tag": "emergency_help",
+      "patterns": [
+        "help emergency", "medical emergency", "call 911", "need ambulance",
+        "heart attack", "stroke symptoms", "severe bleeding", "choking help",
+        "emergency response", "first aid", "critical situation", "urgent help needed",
+        "emergency services", "life threatening", "immediate medical attention"
+      ],
+      "responses": [
+        "For a medical emergency, please call emergency services (like 911 in the US) immediately rather than chatting here.",
+        "This sounds urgent - please contact emergency services immediately. In many countries, that's 911, 999, or 112.",
+        "Please call emergency services right away. I'm not able to provide emergency assistance.",
+        "For any life-threatening situation, please call your local emergency number immediately.",
+        "Medical emergencies require immediate professional help. Please call emergency services now.",
+        "Please stop messaging and call emergency services immediately if you're experiencing a medical emergency.",
+        "I can't provide emergency services. Please call your local emergency number right away.",
+        "Emergency situations require immediate professional response. Please contact emergency services, not an AI assistant.",
+        "For emergencies, please contact professional emergency services immediately. Every moment counts.",
+        "Please call emergency services now if you or someone else needs urgent medical attention."
+      ]
+    },
+    {
+      "tag": "gaming_recommendations",
+      "patterns": [
+        "game recommendations", "video game suggestions", "what games to play",
+        "best video games", "pc game recommendations", "mobile games",
+        "console games", "gaming suggestions", "popular games",
+        "indie games", "game advice", "fun games", "what should I play",
+        "new games", "gaming recommendations"
+      ],
+      "responses": [
+        "Popular games with broad appeal include Minecraft, The Legend of Zelda series, and Animal Crossing.",
+        "If you enjoy narrative-focused games, try titles like The Last of Us, Red Dead Redemption 2, or Life is Strange.",
+        "For competitive gaming, popular options include League of Legends, Valorant, Overwatch, and fighting games like Street Fighter.",
+        "Indie games often offer unique experiences - titles like Hades, Hollow Knight, and Stardew Valley are highly regarded.",
+        "Strategy fans might enjoy Civilization, XCOM, or real-time strategy games like StarCraft.",
+        "For mobile gaming, games like Monument Valley, Among Us, and Genshin Impact offer different types of experiences.",
+        "Role-playing game fans might enjoy series like Final Fantasy, The Elder Scrolls, or The Witcher.",
+        "If you enjoy puzzle games, Portal, The Witness, and Baba Is You offer creative challenges.",
+        "Horror game enthusiasts might appreciate titles like Resident Evil, Dead Space, or indie horror games like Phasmophobia.",
+        "For relaxing gameplay, consider simulation games like The Sims, Cities: Skylines, or casual games like Unpacking."
+      ]
+    },
+    {
+      "tag": "small_talk_weather",
+      "patterns": [
+        "it's raining today", "beautiful day", "it's cold outside", "snowing here",
+        "weather is nice", "it's hot today", "weather is terrible", "sunny day",
+        "terrible weather", "it's cloudy", "weather's perfect", "stormy here",
+        "nice day today", "freezing outside", "hot outside"
+      ],
+      "responses": [
+        "Weather can really affect our mood, can't it? How does today's weather make you feel?",
+        "I hope you're staying comfortable whatever the weather is like!",
+        "Weather is always changing - sometimes for better, sometimes for worse!",
+        "The weather certainly adds character to our days. Is it affecting your plans?",
+        "There's something special about each type of weather, though some are certainly more pleasant than others!",
+        "Weather talk - the universal conversation starter! What's your favorite kind of weather?",
+        "I hope the weather is treating you well! Do you have any weather-dependent plans?",
+        "Weather can be so unpredictable sometimes. Hope it's working in your favor!",
+        "They say there's no bad weather, just inappropriate clothing - though I'm not sure everyone would agree!",
+        "Weather certainly keeps life interesting, doesn't it? Always changing and surprising us!"
+      ]
+    },
+    {
+      "tag": "good_morning",
+      "patterns": [
+        "good morning", "morning", "rise and shine", "up and at em",
+        "morning greetings", "hello morning", "top of the morning", 
+        "morning there", "woke up", "just got up", "early morning"
+      ],
+      "responses": [
+        "Good morning! How are you starting your day?",
+        "Morning! Hope you're having a bright start to your day!",
+        "Good morning! Ready to make today amazing?",
+        "Hello and good morning! What's on your agenda today?",
+        "Morning! Hope you slept well and are ready for the day ahead!",
+        "Good morning! May your coffee be strong and your day be productive!",
+        "Rise and shine! How's your morning going so far?",
+        "Good morning! Starting the day with some positive energy?",
+        "Morning there! Hope today brings you wonderful things!",
+        "Good morning! What's the first thing on your to-do list today?"
+      ]
+    },
+    {
+      "tag": "good_night",
+      "patterns": [
+        "good night", "night", "heading to bed", "going to sleep",
+        "time for bed", "sleep well", "sweet dreams", "goodnight",
+        "nighty night", "sleep tight", "off to bed", "bedtime"
+      ],
+      "responses": [
+        "Good night! Sleep well and sweet dreams!",
+        "Night! Hope you get some restful sleep!",
+        "Good night! May tomorrow bring even better things your way!",
+        "Sleep tight! Hope to chat with you again soon!",
+        "Good night! Rest well and recharge for tomorrow!",
+        "Sweet dreams! Looking forward to our next conversation!",
+        "Good night! Thank you for chatting today!",
+        "Night night! Hope you have a peaceful sleep!",
+        "Good night! May your dreams be pleasant and your sleep refreshing!",
+        "Rest well! Until next time!"
+      ]
+    },
+    {
+      "tag": "goal_setting",
+      "patterns": [
+        "how to set goals", "goal setting advice", "achieve my goals",
+        "setting objectives", "smart goals", "goal planning",
+        "how to reach goals", "personal goals", "accomplishing aims",
+        "goal setting tips", "effective goals", "goal strategies"
+      ],
+      "responses": [
+        "Effective goals are often SMART: Specific, Measurable, Achievable, Relevant, and Time-bound.",
+        "Break larger goals into smaller milestones to make progress more manageable and visible.",
+        "Writing down your goals makes them more concrete and increases your commitment to achieving them.",
+        "Consider your values and what truly matters to you when setting goals to ensure they're meaningful.",
+        "Regular review and adjustment of goals helps keep them relevant as circumstances change.",
+        "Balance is important - set goals across different life areas like health, relationships, career, and personal growth.",
+        "Accountability can help - consider sharing goals with someone supportive or finding an accountability partner.",
+        "Celebrate progress and small wins along the way to maintain motivation and momentum.",
+        "Be kind to yourself if progress is slower than expected - persistence often matters more than speed.",
+        "Remember that goals are tools to guide your growth and choices, not rigid demands that define your worth."
+      ]
+    }
   ]
 }
