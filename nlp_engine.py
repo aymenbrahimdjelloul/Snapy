@@ -1,8 +1,13 @@
 """
 @Author : Aymen Brahim Djelloul
-version : 0.1
-date : 30.04.2025
+Version : 0.1
+Date : 30.04.2025
 License : MIT
+
+     \\ Snapy is a lightweight and simple chatbot with context tracking and online search capabilities,
+        built for educational use and easy customization.
+
+    \\ nlp_engine is a module that contain Natural language processing functions and logic for Snapy bot
 
 """
 
@@ -17,6 +22,16 @@ import os.path
 
 
 class NlpEngine:
+
+    """
+    NlpEngine is a lightweight natural language processing engine designed
+    for chatbot applications. It supports context tracking and an optional
+    developer mode for debugging and extended logging.
+
+    Attributes:
+        dev_mode (bool): Enables verbose output for development purposes.
+        context (list): Stores the history of user inputs for context tracking.
+    """
 
     def __init__(self, dev_mode: bool = False) -> None:
 
