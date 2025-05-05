@@ -1,8 +1,15 @@
 """
-@author : Aymen Brahim Djelloul
-version : 0.1
-date : 05.05.2025
-license : MIT
+@Author : Aymen Brahim Djelloul
+Version : 0.1
+Date : 06.05.2025
+License : MIT
+
+     \\ Snapy is a lightweight and simple chatbot with context tracking and online search capabilities,
+        built for educational use and easy customization.
+        
+    \\ This 'search_engine' module contain the online searching
+     and online response generating logic for Snapy bot
+
 """
 
 # IMPORTS
@@ -411,4 +418,3 @@ if __name__ == "__main__":
     # query = "What is dsg farts ?"
     # engine = SearchEngine(cache_enabled=False)
     # print(engine.get_answer(query))
-
