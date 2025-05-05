@@ -1,38 +1,34 @@
 """
 @author : Aymen Brahim Djelloul
-version : 0.1
-Date : 30.04.2025
-License : MIT
+@version : 0.1
+@date : 30.04.2025
+@license : MIT
 
-
+     \\ Snapy is a lightweight and simple chatbot with context tracking and online search capabilities,
+        built for educational use and easy customization.
 
 """
 
 # IMPORTS
-import sys
-import re
 import os
-import json
+import sys
 import time
+import json
+import random
 import difflib
 import textwrap
-import random
-import requests
-import datetime
 import traceback
-from typing import Dict, List, Tuple, Optional, Union
-import colorama
-from colorama import Fore, Back, Style
-from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import datetime
+import requests
 from dataclasses import dataclass, field
+from typing import Dict, List, Tuple, Optional
 from nlp_engine import NlpEngine
 from search_engine import SearchEngine
 
 
 # DEFINE GENERALE CONFIGS
 @dataclass
-class Config:
+class _Config:
 
     """
     Config class
@@ -44,11 +40,12 @@ class Config:
     RESPONSE_TIMEOUT: int = 60
 
     # DEFINE ASSETS PATHs
+    DATASET_URL: str = "https://raw.githubusercontent.com/aymenbrahimdjelloul/Snapy/refs/heads/main/datasets/dataset.json"
     DATASET_PATH: str = "datasets/dataset.json"
     CHAT_HISTORY_PATH: str = "chat_history.json"
 
     HEADERS: Dict[str, str] = field(default_factory=lambda: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (HTML, like Gecko)'
                       ' Chrome/114.0.0.0 Safari/537.36',
         'Accept-Language': 'en-US,en;q=0.9'
     })
@@ -83,7 +80,7 @@ class NetworkUtils:
         """Download a file from a URL with error handling"""
 
         if headers is None:
-            headers = Config().HEADERS
+            headers = _Config().HEADERS
 
         try:
             response = requests.get(url, timeout=timeout, headers=headers)
@@ -108,10 +105,10 @@ class DatasetManager:
         dataset: dict = None
 
         # Check if dataset exist locally
-        if os.path.exists(Config.DATASET_PATH):
+        if os.path.exists(_Config.DATASET_PATH):
             try:
                 # Load the dataset from local
-                with open(Config.DATASET_PATH, "rb") as f:
+                with open(_Config.DATASET_PATH, "rb") as f:
                     dataset = json.loads(f.read())
 
             except (FileNotFoundError, PermissionError, json.JSONDecodeError) as e:
@@ -125,16 +122,16 @@ class DatasetManager:
             try:
 
                 # Try to download the latest dataset first
-                content = NetworkUtils.download_file(Config.DATASET_URL)
+                content = NetworkUtils.download_file(_Config.DATASET_URL)
                 # Read the downloaded data as json
                 dataset = json.loads(content.decode("UTF-8"))
 
                 # If in developer mode, also save a local copy
-                if self.developer_mode and not os.path.exists(os.path.dirname(Config.DATASET_PATH)):
-                    os.makedirs(os.path.dirname(Config.DATASET_PATH), exist_ok=True)
+                if self.developer_mode and not os.path.exists(os.path.dirname(_Config.DATASET_PATH)):
+                    os.makedirs(os.path.dirname(_Config.DATASET_PATH), exist_ok=True)
 
                 if self.developer_mode:
-                    with open(Config.DATASET_PATH, "wb") as f:
+                    with open(_Config.DATASET_PATH, "wb") as f:
                         f.write(content)
 
             except json.JSONDecodeError as e:
@@ -168,9 +165,9 @@ class DatasetManager:
 class ChatHistory:
     """This class contain the chat history manager"""
 
-    def __init__(self, history_path: str = Config.CHAT_HISTORY_PATH):
+    def __init__(self, history_path: str = _Config.CHAT_HISTORY_PATH):
         self.history_path = history_path
-        self.developer_mode = Config.DEFAULT_DEV_MODE
+        self.developer_mode = _Config.DEFAULT_DEV_MODE
 
     def add_exchange(self, user_text: str, bot_text: str) -> None:
         """ This method will add the new chat"""
@@ -223,14 +220,14 @@ class ChatHistory:
 class Snapy:
     """Main chatbot class integrating all components"""
 
-    def __init__(self, developer_mode: bool = Config.DEFAULT_DEV_MODE, search_mode: bool = False):
+    def __init__(self, developer_mode: bool = _Config.DEFAULT_DEV_MODE, search_mode: bool = False):
 
         # Track developer mode state
         self.developer_mode = developer_mode
         self.search_mode = search_mode
 
         # Update the default dev mode
-        Config.DEFAULT_DEV_MODE = developer_mode
+        _Config.DEFAULT_DEV_MODE = developer_mode
 
         # Define is connected online
         self.is_connected: bool = NetworkUtils.is_connected()
@@ -300,16 +297,16 @@ class Snapy:
                             best_score = sim
                             best_intent = intent
 
-                if best_score >= Config.MEDIUM_CONFIDENCE and best_intent:
+                if best_score >= _Config.MEDIUM_CONFIDENCE and best_intent:
                     response = random.choice(best_intent.get("responses", ["Let me think..."]))
                     confidence = best_score
 
             # --- STEP 3: Online Search Fallback ---
-            if not response and self.is_connected and confidence < Config.MEDIUM_CONFIDENCE:
+            if not response and self.is_connected and confidence < _Config.MEDIUM_CONFIDENCE:
                 response = self._adjust_response(self.search_engine.get_answer(normalized_message))
                 confidence = 1.0
 
-                # Print online search indicatior when dev mode
+                # Print online search indicator when dev mode
                 if self.developer_mode:
                     print("Searching Online ...")
 
@@ -426,8 +423,12 @@ class SnapyUI:
     """User interface for Snapy chatbot"""
 
     def __init__(self, snapy: Snapy):
+
         self.snapy = snapy
         colorama.init(autoreset=True)
+
+        # Define the terminal width
+        self.TERMINAL_WIDTH = shutil.get_terminal_size().columns
 
     @staticmethod
     def clear_screen():
@@ -443,7 +444,7 @@ class SnapyUI:
             return 80
 
     @staticmethod
-    def print_with_typing_effect(text: str, speed: float = Config.TYPING_SPEED) -> None:
+    def print_with_typing_effect(text: str, speed: float = _Config.TYPING_SPEED) -> None:
         """Print text with a typing effect"""
 
         for char in text:
@@ -453,11 +454,23 @@ class SnapyUI:
 
         print()
 
-    def print_header(self):
-        """Print a styled header for Snapy CLI"""
-        term_width = self.get_terminal_width()
-        header = f" | Snapy {' ' * (term_width - 15)} | V {Config.VERSION}"
-        print(f"{Fore.CYAN}{Style.BRIGHT}{header}{Style.RESET_ALL}")
+    def display_header(self) -> None:
+        """Display the application header"""
+        self.clear_screen()
+        print()
+        self.print_centered(f"╭{'─' * (self.TERMINAL_WIDTH - 4)}╮")
+
+        # Logo line
+        logo = f" Snapy "
+        version_str: str = f"V {_Config.VERSION} "
+
+        # Calculate the padding values
+        padding = self.TERMINAL_WIDTH - len(logo) - len(version_str) - 4
+
+        # Print it
+        print(f"  {Fore.MAGENTA}{Fore.CYAN}{Style.BRIGHT}{logo}{' ' * padding}{version_str}{Fore.MAGENTA}")
+
+        self.print_centered(f"╰{'─' * (self.TERMINAL_WIDTH - 4)}╯")
 
     def print_help(self):
         """Print help information"""
@@ -472,10 +485,8 @@ class SnapyUI:
             ("clear", "Clear the chat history from screen"),
             ("exit/quit/bye", "Exit the program"),
             ("dev", "Toggle developer mode"),
-            ("refresh", "Refresh the dataset"),
             ("history", "Show recent chat history"),
             ("about", "Show information about Snapy"),
-            ("reset", "Clear chat history file"),
             ("search <query>", "Search the web for information"),
             ("version", "Display version information")
         ]
@@ -485,30 +496,30 @@ class SnapyUI:
 
         print(f"{Fore.YELLOW}{'=' * term_width}{Style.RESET_ALL}\n")
 
-    def print_about(self):
-        """Print about information"""
-        term_width = self.get_terminal_width()
+    def show_about(self) -> None:
+        """Display information about the application"""
+        self.display_title("ABOUT Snapy Chatbot ")
 
-        print(f"\n{Fore.CYAN}{'=' * term_width}{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}{Style.BRIGHT}{'ABOUT SNAPY':^{term_width}}{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}{'=' * term_width}{Style.RESET_ALL}")
+        print(f"  {Fore.WHITE}Snapy is a lightweight and fast AI Chatbot using"
+              f" preprocessed dataset and online searching capabilities \n\n\n"
+              f"    {Fore.MAGENTA}• Release Date: {_Config.RELEASE_DATE}\n\n"
+              f"    {Fore.MAGENTA}• Software Version : {_Config.VERSION}\n"
+              f"    {Fore.MAGENTA}• Dataset Version : {self.snapy.dataset_version}\n"
+              f"    {Fore.WHITE}• Developed by : {Style.BRIGHT} Aymen Brahim Djelloul {Style.RESET_ALL}\n\n"
+              f"    {Fore.WHITE}• look : https://github.com/aymenbrahimdjelloul/Snapy\n\n\n\n")
 
-        about_text = [
-            f"Snapy v{Config.VERSION} - A pattern-matching chatbot with web search capabilities",
-            f"Released on: {Config.RELEASE_DATE}",
-            f"Current dataset version: {self.snapy.dataset_version}",
-            f"Dataset last updated: {self.snapy.dataset_updated}",
-            "",
-            "Created by Aymen Brahim Djelloul",
-            "Licensed under MIT License",
-            "",
-            "Repository: https://github.com/aymenbrahimdjelloul/Snapy"
-        ]
+        # Put a
+        # Wait for pressing key to quit
+        self.wait_for_key()
 
-        for line in about_text:
-            print(f"{line}")
-
-        print(f"{Fore.CYAN}{'=' * term_width}{Style.RESET_ALL}\n")
+    def display_title(self, title: str) -> None:
+        """Display a section title"""
+        self.clear_screen()
+        print()
+        self.print_centered(f"╭{'─' * (self.TERMINAL_WIDTH - 4)}╮")
+        self.print_centered(f"  {title.center(self.TERMINAL_WIDTH - 4)}")
+        self.print_centered(f"╰{'─' * (self.TERMINAL_WIDTH - 4)}╯")
+        print()
 
     @staticmethod
     def print_thinking_animation():
@@ -520,7 +531,7 @@ class SnapyUI:
             for c in "...":
                 sys.stdout.write(c)
                 sys.stdout.flush()
-                time.sleep(Config.THINKING_ANIMATION_SPEED)
+                time.sleep(_Config.THINKING_ANIMATION_SPEED)
             sys.stdout.write("\b\b\b   \b\b\b")
             sys.stdout.flush()
 
@@ -553,7 +564,7 @@ class SnapyUI:
         """Start the chatbot interface"""
         # Clear screen and show welcome
         self.clear_screen()
-        self.print_header()
+        self.display_header()
 
         # Display developer mode status if enabled
         if self.snapy.developer_mode:
@@ -603,20 +614,6 @@ class SnapyUI:
             print(f"\n\n{Fore.BLUE}Snapy: {Style.RESET_ALL}Session ended by user. Goodbye!")
             return
 
-        # except Exception as e:
-        #     # More detailed error handling
-        #     error_details = traceback.format_exc()
-        #
-        #     print(f"\n{Fore.RED}ERROR: {Style.RESET_ALL}{str(e)}")
-        #
-        #     # In developer mode, show stack trace
-        #     if self.snapy.developer_mode:
-        #         print(f"\n{Fore.RED}=== STACK TRACE ==={Style.RESET_ALL}")
-        #         print(error_details)
-        #
-        #     print(f"\n{Fore.YELLOW}Please report this issue if it persists.{Style.RESET_ALL}")
-        #     return
-
     def _handle_commands(self, lower_input: str) -> bool:
         """
         Handle special commands
@@ -641,7 +638,10 @@ class SnapyUI:
 
         # About command
         elif lower_input == 'about':
-            self.print_about()
+            self.show_about()
+
+            # Show header
+            self.display_header()
             return True
 
         # Clear screen command
@@ -652,7 +652,7 @@ class SnapyUI:
             self.snapy.chat_history.clear()
 
             # Print the header
-            self.print_header()
+            self.display_header()
             print(f"\n{Fore.GREEN}System: {Style.RESET_ALL}Chat screen cleared.\n")
             return True
 
@@ -671,19 +671,6 @@ class SnapyUI:
             print(f"\n{Fore.GREEN}System: {Style.RESET_ALL}Search mode {Fore.YELLOW}{mode_status}{Style.RESET_ALL}.\n")
             return True
 
-        # Refresh dataset
-        elif lower_input == 'refresh':
-            print(f"\n{Fore.GREEN}System: {Style.RESET_ALL}Refreshing dataset...")
-            success = self.snapy.refresh_dataset()
-
-            if success:
-                print(f"{Fore.GREEN}System: {Style.RESET_ALL}"
-                      f"Dataset refreshed successfully (version: {self.snapy.dataset_version}).\n")
-
-            else:
-                print(f"{Fore.RED}System: {Style.RESET_ALL}Failed to refresh dataset.\n")
-            return True
-
         # Show chat history
         elif lower_input == 'history':
             self.show_recent_history()
@@ -691,13 +678,37 @@ class SnapyUI:
 
         # Show version info
         elif lower_input == 'version':
-            print(f"\n{Fore.GREEN}Snapy version: {Style.RESET_ALL}{Config.VERSION}")
+            print(f"\n{Fore.GREEN}Snapy version: {Style.RESET_ALL}{_Config.VERSION}")
             print(f"{Fore.GREEN}Dataset version: {Style.RESET_ALL}{self.snapy.dataset_version}")
-            print(f"{Fore.GREEN}Release date: {Style.RESET_ALL}{Config.RELEASE_DATE}\n")
+            print(f"{Fore.GREEN}Release date: {Style.RESET_ALL}{_Config.RELEASE_DATE}\n")
             return True
 
         # Not a command
         return False
+
+    def print_centered(self, text: str) -> None:
+        """Print text centered in terminal"""
+        print(f"{Fore.MAGENTA}{text.center(self.TERMINAL_WIDTH)}")
+
+    @staticmethod
+    def wait_for_key() -> None:
+        """Wait for user to press any key to continue"""
+        print(f"\n  {Fore.YELLOW}Press Enter to continue...{Style.RESET_ALL}", end="")
+        input()
+
+
+def log_unhandled_exception(exc_type, exc_value, exc_traceback):
+    """ This function will create log errors file to track errors"""
+
+    os.makedirs("errors", exist_ok=True)
+    log_file = os.path.join("errors", f"error_{datetime.datetime.now():%Y%m%d_%H%M%S}.log")
+
+    with open(log_file, "w") as f:
+        f.write("Unhandled Exception:\n")
+        traceback.print_exception(exc_type, exc_value, exc_traceback, file=f)
+
+    print(f"\n[!] Error logged to: {log_file}")
+    sys.exit(1)
 
 
 def main():
@@ -712,4 +723,12 @@ def main():
 
 
 if __name__ == "__main__":
+
+    # Hook to catch all unhandled exceptions
+    # sys.excepthook = log_unhandled_exception
+
+    # import CLI modules when runs the main file
+    import shutil, colorama
+    from colorama import Fore, Style
+
     main()
