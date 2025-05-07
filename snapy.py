@@ -725,7 +725,7 @@ def main():
 if __name__ == "__main__":
 
     # Hook to catch all unhandled exceptions
-    # sys.excepthook = log_unhandled_exception
+    sys.excepthook = log_unhandled_exception
 
     # import CLI modules when runs the main file
     import shutil, colorama
