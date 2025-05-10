@@ -220,7 +220,7 @@ class ChatHistory:
 class Snapy:
     """Main chatbot class integrating all components"""
 
-    def __init__(self, developer_mode: bool = _Config.DEFAULT_DEV_MODE, search_mode: bool = False):
+    def __init__(self, developer_mode: bool = _Config.DEFAULT_DEV_MODE, search_mode: bool = True):
 
         # Track developer mode state
         self.developer_mode = developer_mode
