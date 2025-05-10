@@ -56,11 +56,10 @@ Snapy can be customized for your workflows—whether you're automating tasks, se
 
 ## **Incoming Updates ?**
 
-- **Deploy Snapy in Web application
-- **Improve and implement conversation context handling
-- **Improve Online search engine
-- **Update Snapy Dataset with more intents
-
+- **Deploy Snapy in Web application**
+- **Improve and implement conversation context handling**
+- **Improve Online search engine**
+- **Update Snapy Dataset with more intents**
 ---
 
 ## **Why Snapy ?**
