@@ -1,8 +1,8 @@
+# **Snapy**
 <a href="https://github.com/aymenbrahimdjelloul/Snapy/releases/latest">
     <img src="https://img.shields.io/github/v/release/aymenbrahimdjelloul/Snapy?color=green&label=Download&style=for-the-badge" alt="Download Latest Release">
 </a>
 
-# **Snapy**
 
 **Snapy** is a powerful and lightweight AI Chatbot It’s designed to enhance your productivity by offering intelligent with Command-line interface to test it
 
