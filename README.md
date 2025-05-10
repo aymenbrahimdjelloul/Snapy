@@ -1,8 +1,11 @@
 # **Snapy**
 
-#### A Terminal-Based AI Chatbot Assistant
+**Snapy** is a powerful and lightweight AI Chatbot It’s designed to enhance your productivity by offering intelligent with Command-line interface to test it
 
-**Snapy** is a powerful and lightweight AI Chatbot It’s designed to enhance your productivity by offering intelligent command handling, styled outputs, typing effects, developer tools, and persistent chat history—all from your terminal.
+~~~bash
+> Hello, Snapy!
+🤖 Snapy: Hi there! How can I assist you today?
+~~~
 
 ---
 
@@ -51,7 +54,16 @@ Snapy can be customized for your workflows—whether you're automating tasks, se
 
 ---
 
-## **Why Snapy?**
+## **Incoming Updates ?**
+
+- **Deploy Snapy in Web application
+- **Improve and implement conversation context handling
+- **Improve Online search engine
+- **Update Snapy Dataset with more intents
+
+---
+
+## **Why Snapy ?**
 
 - **Terminal-Native:** Runs entirely in the command
 - **Fast & Lightweight:** Built with speed and simplicity in mind  
@@ -61,7 +73,50 @@ Snapy can be customized for your workflows—whether you're automating tasks, se
 
 ## **Getting Started**
 
-```bash
+~~~bash
 git clone https://github.com/aymenbrahimdjelloul/Snapy.git
 cd Snapy
 python snapy.py
+~~~
+
+## **Contribute**
+
+We welcome contributions to **HashRipper**! Whether you're fixing a bug, suggesting a feature, or submitting code, your help makes this tool better.
+
+**To contribute:**
+1. Fork the repository.
+2. Create a new branch (`feature/my-feature` or `fix/my-bug`).
+3. Make your changes and test thoroughly.
+4. Submit a pull request with a detailed description.
+
+---
+
+## **Thanks**
+
+Special thanks to:
+
+- **Cybersecurity Experts** – for providing best practices and guidance.
+- **Open Source Contributors** – for generously sharing your time and skills.
+  
+Thank you for using **HashRipper** – Stay safe and crack responsibly!
+
+---
+
+### License : 
+
+~~~
+MIT License
+
+Copyright (c) 2025 Aymen Brahim Djelloul
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+~~~
