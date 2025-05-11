@@ -72,6 +72,7 @@ Snapy can be customized for your workflows—whether you're automating tasks, se
 - **Fast & Lightweight:** Built with speed and simplicity in mind  
 - **AI-Enhanced:** Use local or online models to power intelligent chat  
 - **Use Online searching for geting informations
+
 ---
 
 ## **Getting Started**
