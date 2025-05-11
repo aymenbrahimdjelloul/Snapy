@@ -96,12 +96,10 @@ We welcome contributions to **HashRipper**! Whether you're fixing a bug, suggest
 
 ## **Thanks**
 
-Special thanks to:
+Thanks for all Snapy users and contributors and who test it i really appreiciate it
 
-- **Cybersecurity Experts** – for providing best practices and guidance.
-- **Open Source Contributors** – for generously sharing your time and skills.
   
-Thank you for using **HashRipper** – Stay safe and crack responsibly!
+
 
 ---
 
