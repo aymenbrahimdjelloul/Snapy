@@ -1,8 +1,8 @@
 """
-@Author : Aymen Brahim Djelloul
-Version : 0.1
-Date : 30.04.2025
-License : MIT
+@author : Aymen Brahim Djelloul
+@version : 0.1
+@date : 30.04.2025
+@license : MIT
 
      \\ Snapy is a lightweight and simple chatbot with context tracking and online search capabilities,
         built for educational use and easy customization.
@@ -220,7 +220,7 @@ class ChatHistory:
 class Snapy:
     """Main chatbot class integrating all components"""
 
-    def __init__(self, developer_mode: bool = _Config.DEFAULT_DEV_MODE, search_mode: bool = True):
+    def __init__(self, developer_mode: bool = _Config.DEFAULT_DEV_MODE, search_mode: bool = False):
 
         # Track developer mode state
         self.developer_mode = developer_mode
